@@ -1,6 +1,8 @@
+import 'package:d_mart/utils/constants/app_colors.dart';
 import 'package:d_mart/view/widgets/custom_appbar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,7 +15,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbarWidget(title: "Mega Mall"),
+      appBar: CustomAppbarWidget(
+        title: "Mega Mall",
+        firstIcon: Icon(Iconsax.notification_bing_outline),
+        secondIcon: Icon(
+          Iconsax.shopping_cart_outline,
+          color: AppColors.navyBlack,
+        ),
+        showBackButoon: true,
+      ),
 
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

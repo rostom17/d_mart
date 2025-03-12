@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -14,17 +15,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           "Mega Mall",
-          style: TextStyle(fontFamily: "DMSans", fontWeight: FontWeight.bold,),
+          style: TextStyle(
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
         ),
+        actions: [
+          Icon(CupertinoIcons.bell),
+          const SizedBox(width: 20),
+          Icon(CupertinoIcons.cart),
+        ],
         centerTitle: true,
       ),
 
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[const Text('Hello wrold')],
-        ),
-      ),
+      body: Column(
+        children: [
+          
+        ],
+      )
     );
   }
 }

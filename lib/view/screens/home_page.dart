@@ -1,3 +1,4 @@
+import 'package:d_mart/view/widgets/custom_appbar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,28 +13,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Mega Mall",
-          style: TextStyle(
-            fontFamily: "DMSans",
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
-          ),
-        ),
-        actions: [
-          Icon(CupertinoIcons.bell),
-          const SizedBox(width: 20),
-          Icon(CupertinoIcons.cart),
-        ],
-        centerTitle: true,
-      ),
+      appBar: CustomAppbarWidget(title: "Mega Mall"),
 
-      body: Column(
-        children: [
-          
-        ],
-      )
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            SearchBar(
+              trailing: [
+                Icon(CupertinoIcons.search),
+                const SizedBox(width: 20),
+              ],
+              shape: WidgetStateProperty.all(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              ),
+              elevation: WidgetStatePropertyAll(0),
+            ),
+            ClipRRect(borderRadius: BorderRadius.circular(20)),
+          ],
+        ),
+      ),
     );
   }
 }

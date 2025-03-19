@@ -1,5 +1,5 @@
-import 'package:d_mart/view/screens/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:d_mart/view/screens/bottom_nav_screens.dart';
 
 class DMart extends StatelessWidget {
   const DMart({super.key});
@@ -9,7 +9,7 @@ class DMart extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DMart',
-      home: const MyHomePage(),
+      home: BottomNavScreens(),
     );
   }
 }

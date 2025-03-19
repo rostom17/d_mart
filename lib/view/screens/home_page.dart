@@ -44,6 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        //currentIndex: 0,
+        //onTap: (){},
+        items: [
+          BottomNavigationBarItem(icon: Icon(Iconsax.home_outline), label: ""),
+          BottomNavigationBarItem(icon: Icon(Iconsax.heart_outline), label: ""),
+          BottomNavigationBarItem(icon: Icon(Iconsax.shopping_bag_outline), label: ""),
+          BottomNavigationBarItem(icon: Icon(Iconsax.profile_2user_outline), label: ""),
+        ],
+      ),
     );
   }
 }
